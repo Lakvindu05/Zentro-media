@@ -1,0 +1,169 @@
+.Companies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffd1ff;
+  width: 100%;
+  height: 470px;
+  left: 0px;
+  mix-blend-mode: normal;
+}
+
+.Companies .Companies-text {
+  margin-top: -3%;
+  margin-bottom: 60px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 52px;
+  color: #000000;
+}
+
+.Companies .Companies-logos {
+  margin: 2% 0;
+  display: grid;
+  justify-content: center;
+}
+
+.Companies .Companies-logos .Logo-Row {
+  display: flex;
+}
+
+.Companies .Companies-logos .Logo-Row .logo {
+  margin-right: 60px;
+}
+
+.Companies .Companies-logos .Logo-Row .logo img {
+  width: 240px;
+  filter: grayscale(1);
+  transition: transform 0.8s ease-in-out;
+}
+
+.Companies .Companies-logos .Logo-Row .logo img:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.Companies .Companies-logos .Logo-Row .logo.curestown {
+  margin-right: 10px;
+  margin-top: -20px;
+}
+
+.Companies .Companies-logos .Logo-Row .logo.lg {
+  margin-right: 50px;
+  margin-top: -20px;
+}
+
+.Companies .Companies-logos .Logo-Row .logo.lg {
+  position: relative;
+  left: 50px;
+  margin-top: -55px;
+}
+
+.Companies .Companies-logos .Logo-Row .logo.maxceon {
+  position: relative;
+  left: 50px;
+  margin-top: -40px;
+}
+
+.Companies .Companies-logos .Logo-Row .logo.hustlers {
+  position: relative;
+  left: 40px;
+  margin-top: -30px;
+}
+
+.Companies .Companies-logos .Logo-Row .logo.kings {
+  position: relative;
+  margin-top: -40px;
+}
+
+.Companies .Companies-logos .Logo-Row .logo.curestown img {
+  width: 135px;
+}
+
+.Companies .Companies-logos .Logo-Row .logo.maxceon img {
+  width: 115px;
+}
+
+.Companies .Companies-logos .Logo-Row .logo.hustlers img {
+  width: 150px;
+}
+
+.Companies .Companies-logos .Logo-Row .logo.lg img {
+  width: 125px;
+}
+
+.Companies .Companies-logos .Logo-Row .logo.kings img {
+  width: 145px;
+}
+
+@media screen and (max-width: 758px) {
+  .Companies {
+    height: 500px;
+    padding: 8% 0;
+  }
+
+  .Companies .Companies-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Companies .Companies-logos .Logo-Row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Change to center align the logos vertically */
+    margin: 3% 0;
+  }
+
+  .Companies .Companies-logos .Logo-Row .logo {
+    margin: 10px 0;
+    /* Increase the top and bottom margins to increase the gaps */
+  }
+
+  .Companies .Companies-logos .Logo-Row .logo.curestown {
+    margin-right: 10px;
+    margin-top: 10px;
+    /* Move the logo to the right */
+  }
+
+  .Companies .Companies-logos .Logo-Row .logo.kings {
+    margin-right: 10px;
+    /* Move the logo to the right */
+  }
+
+  .Companies .Companies-logos .Logo-Row .logo.lg {
+    margin-left: -110px;
+    /* Change to move the logo to the left */
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  .Companies .Companies-logos .Logo-Row .logo.maxceon {
+    margin-left: -110px;
+    /* Change to move the logo to the left */
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  .Companies .Companies-logos .Logo-Row .logo.hustlers {
+    margin-left: -80px;
+    /* Change to move the logo to the left */
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  .Companies .Companies-text {
+    margin-top: 20px;
+    /* Adjust the margin-top value to move the text down */
+  }
+
+  .Companies {
+    height: 850px;
+    /* Increase the height value as needed */
+  }
+}
