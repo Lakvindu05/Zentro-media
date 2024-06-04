@@ -16,7 +16,7 @@ export default function CaseStudy() {
       </div>
       <div className="content">
         <div className="image">
-          <img src="new new gif.jpg" alt="Case Study" />
+          <img src="./images/new new gif.jpg" alt="Case Study" />
         </div>
         <div className="text">
           <p>Unveiling the Secrets Behind Our Unprecedented ROI Generation for Clients.</p>

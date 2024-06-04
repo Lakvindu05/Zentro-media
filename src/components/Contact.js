@@ -41,7 +41,7 @@ export default function Contact() {
         <div>
           <ul className="nottodolist">
             <div>
-              <img src="correct.png" alt="" />
+              <img src="./images/correct.png" alt="" />
               <li>
                 Businesses looking to convert their current website into a{" "}
                 <br />{" "}
@@ -51,14 +51,14 @@ export default function Contact() {
               </li>
             </div>
             <div>
-              <img src="correct.png" alt="" />
+              <img src="./images/correct.png" alt="" />
               <li>
                 Businesses looking to take their offline business{" "}
                 <span className="bold-texts">online.</span>
               </li>
             </div>
             <div>
-              <img src="correct.png" alt="" />
+              <img src="./images/correct.png" alt="" />
               <li>
                 Businesses looking to understand their{" "}
                 <span className="bold-texts">
@@ -69,7 +69,7 @@ export default function Contact() {
               </li>
             </div>
             <div>
-              <img src="correct.png" alt="" />
+              <img src="./images/correct.png" alt="" />
               <li>
                 Businesses looking to
                 <span className="bold-texts">
@@ -81,7 +81,7 @@ export default function Contact() {
               </li>
             </div>
             <div>
-              <img src="correct.png" alt="" />
+              <img src="./images/correct.png" alt="" />
               <li>
                 Businesses looking for a reliable agency that can{" "}
                 <span className="bold-texts">

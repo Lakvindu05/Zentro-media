@@ -27,7 +27,6 @@ export default function NavBar() {
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
 
-    // Disable scrolling on the body element when the menu is open
     if (!isMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
@@ -37,13 +36,13 @@ export default function NavBar() {
 
   const closeMenu = () => {
     setMenuOpen(false);
-    document.body.style.overflow = "auto"; // Restore scrolling on the body element when the menu is closed
+    document.body.style.overflow = "auto"; 
   };
 
   return (
     <div className="whole-navbar">
       <nav className={`${isMenuVisible ? "" : "hide"}`}>
-        <img src="Nav Bar Zentro Media Logo.png" alt="Zentro Media Logo" />
+        <img src="./images/Nav Bar Zentro Media Logo.png" alt="Zentro Media Logo" />
         <div
           className={`menu-icon ${isMenuOpen ? "open" : ""}`}
           onClick={toggleMenu}
@@ -86,7 +85,6 @@ export default function NavBar() {
           Let's Talk
         </Link>
       </nav>
-      <hr />
     </div>
   );
 }

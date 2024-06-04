@@ -5,20 +5,12 @@ nav {
   justify-content: space-between;
   width: 100%;
   min-width: 320px;
-  /* Set a minimum width to avoid horizontal scrolling */
+  background-color: rgb(34, 34, 34);
   max-width: 100vw;
-  /* Limit the maximum width to the viewport width */
   height: 100px;
-  background-color: white;
-  /* Set the background color to white */
-  position: absolute;
-  /* Add position fixed */
   top: 0;
-  /* Position it at the top of the viewport */
   left: 0;
-  /* Position it at the left of the viewport */
   overflow-x: auto;
-  /* Enable horizontal scrolling when necessary */
 }
 
 nav img {
@@ -60,13 +52,11 @@ nav img {
 
 .menu {
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   padding: 0;
   width: 100%;
   white-space: nowrap;
-  /* Prevent menu items from wrapping */
 }
 
 .menu li {
@@ -80,7 +70,7 @@ nav img {
 
 .menu a {
   font-size: 16px;
-  color: black;
+  color: white;
   text-decoration: none;
   font-weight: 400;
   position: relative;

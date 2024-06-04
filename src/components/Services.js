@@ -50,27 +50,27 @@ export default function Revenue() {
         <div className="serviceContainer">
           <ul>
             <div>
-              <img src="redcross.png" alt="" />
+              <img src="./images/redcross.png" alt="" />
               <li>WEB DESIGN</li>
             </div>
             <div>
-              <img src="redcross.png" alt="" />
+              <img src="./images/redcross.png" alt="" />
               <li>CONTENT CREATION</li>
             </div>
             <div>
-              <img src="redcross.png" alt="" />
+              <img src="./images/redcross.png" alt="" />
               <li>EMAIL MARKETING</li>
             </div>
             <div>
-              <img src="redcross.png" alt="" />
+              <img src="./images/redcross.png" alt="" />
               <li>SOCIAL MEDIA MANAGEMENT</li>
             </div>
             <div>
-              <img src="redcross.png" alt="" />
+              <img src="./images/redcross.png" alt="" />
               <li>INSTAGRAM GROWTH</li>
             </div>
             <div>
-              <img src="redcross.png" alt="" />
+              <img src="./images/redcross.png" alt="" />
               <li>PR SERVICE</li>
             </div>
           </ul>

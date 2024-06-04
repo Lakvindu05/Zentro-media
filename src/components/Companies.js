@@ -10,30 +10,30 @@ export default function Companies() {
       <div className="Companies-logos">
         <div className="Logo-Row">
           <div className="logo kings">
-            <img src="Viral Kings.png" alt="" />
+            <img src="./images/Viral Kings.png" alt="" />
           </div>
           <div className="logo win holdings">
-            <img src="Win Holdings.png" alt="" />
+            <img src="./images/Win Holdings.png" alt="" />
           </div>
           <div className="logo curestown">
-            <img src="Curestown.png" alt="" />
+            <img src="./images/Curestown.png" alt="" />
           </div>
           <div className="logo lg">
-            <img src="LG logo.png" alt="" />
+            <img src="./images/LG logo.png" alt="" />
           </div>
           <div className="logo maxceon">
-            <img src="Maxceon.png" alt="" />
+            <img src="./images/Maxceon.png" alt="" />
           </div>
           <div className="logo hustlers">
-            <img src="Hustlers Outlet.png" alt="" />
+            <img src="./images/Hustlers Outlet.png" alt="" />
           </div>
         </div>
         <div className="Logo-Row">
           {/* <div className="logo maxceon">
-            <img src="Maxceon.png" alt="" />
+            <img src="./images/./images/./images/Maxceon.png" alt="" />
           </div> */}
           {/* <div className="logo">
-            <img src="ZentroMediaa.png" alt="" />
+            <img src="./images/./images/ZentroMediaa.png" alt="" />
           </div> */}
         </div>
       </div>

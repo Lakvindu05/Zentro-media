@@ -25,7 +25,7 @@ export default function Container() {
           </button>
         </Link>
       </div>
-      <img src="2077.png" alt="No1" />
+      <img src="./images/2077.png" alt="No1" />
     </div>
   );
 }

@@ -8,12 +8,12 @@ export default function Footer() {
       <div className="members">
         <div className="row 1">
           <div className="team-members">
-            <img src="Ryan.jpg" alt="Ryan Gunatilake" />
+            <img src="./images/Ryan.jpg" alt="Ryan Gunatilake" />
             <h4>Ryan Gunatilake</h4>
             <p>FOUNDER</p>
           </div>
           <div className="team-members">
-            <img src="Lassen.jpg" alt="pic" />
+            <img src="./images/Lassen.jpg" alt="pic" />
             <h4>Lassen Wijekoon</h4>
             <p>CHIEF MARKETING <br />
               OFFICER</p>
@@ -21,12 +21,12 @@ export default function Footer() {
         </div>
         <div className="row 2">
           <div className="team-members">
-            <img src="Nethsara.jpg" alt="Nethsara Perera" />
+            <img src="./images/Nethsara.jpg" alt="Nethsara Perera" />
             <h4>Nethsara Perera</h4>
             <p>CO-FOUNDER</p>
           </div>
           <div className="team-members">
-            <img src="Krishan.jpg" alt="pic" />
+            <img src="./images/Krishan.jpg" alt="pic" />
             <h4>Krishan Shalitha</h4>
             <p>PERFORMANCE <br />
               MARKETER
