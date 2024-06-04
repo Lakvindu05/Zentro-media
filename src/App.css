@@ -1,13 +1,73 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-body {
-  background: linear-gradient(180deg, #f2daff 0%, #fcf5ff 100%);
-  font-style: normal;
-  font-family: "Poppins";
-  padding: 0;
-  margin: 0;
+body{
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    background-color: rgb(30, 30, 30);
+    color: rgb(212, 212, 212);
+    font-size: 15px;
+    min-height: 100vh;
+    background-image: 
+        repeating-linear-gradient( 90deg, transparent 0 49px, rgb(0, 0, 0) 49px 50px ),
+        repeating-linear-gradient( 180deg, transparent 0 49px, black 49px 50px);
+    &::before{
+        position: fixed;
+        width: 400px;
+        height: 400px;
+        content: '';
+        background-image: linear-gradient(120deg, rgb(184, 59, 59) 10% ,rgb(247, 72, 195) 45%,rgb(29, 134, 210) 75%);
+        z-index: -1;
+        top: calc(50% - 200px);
+        left: calc(75% - 200px);
+        border-radius: 80% 80% 80% 80%;
+        filter: blur(180px);
+        pointer-events: none;
+    }
+    &::after {
+        position: fixed;
+        width: 250px;
+        height: 250px;
+        content: '';
+        background-image: linear-gradient(120deg, rgb(184, 59, 59) 10% ,rgb(247, 72, 195) 45%,rgb(29, 134, 210) 75%);
+        z-index: -1;
+        top: calc(20% - 150px);
+        left: calc(25% - 150px);
+        border-radius: 50%;
+        filter: blur(120px);
+        pointer-events: none;
+    }
 }
-
-html {
-  scroll-behavior: smooth;
+main{
+    width: 1300px;
+    max-width: 100%;
+    margin: 0;
+}
+header{
+    position: fixed;
+    width: 1300px;
+    max-width: 100%;
+    height: 80px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 100;
+    backdrop-filter: blur(25px);
+    & img{
+        width: 250px;
+    }
+    & .logo,nav{
+        display: flex;
+        gap: 30px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        & span:hover{
+            color: rgb(4, 159, 197);
+            text-shadow: 0 0 25px;
+        }
+    }
 }
