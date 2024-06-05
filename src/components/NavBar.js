@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 
 const NavBar = () => {
-  const [listNav] = useState(['Home','Services','Companies','Team','Case Study','Contact Us'])
   return (
     <header>
       <div className="logo">
         <img src="/Nav-Logo.png" alt="" />
       </div>
       <nav>
-        {
-          listNav.map((item, index) => (
-            <span key={index}>{item}</span>
-          ))
-        }
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Companies</a>
+        <a href="#">Team</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Case Study</a>
       </nav>
     </header>
   )
