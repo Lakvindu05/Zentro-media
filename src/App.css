@@ -30,7 +30,7 @@ header {
     padding: 0 5vw; 
     box-sizing: border-box;
     z-index: 100; /* displayed above every element */
-    backdrop-filter: blur(25px); /* applying blur effect to content below */
+    backdrop-filter: blur(50px); /* applying blur effect to content below */
 }
 
 header img {
@@ -46,6 +46,8 @@ header .logo, header nav {
 }
 
 header nav a {
+    font-size: 21px;
+    font-weight: 600;
     text-decoration: none;
     color: #fff;
     position: relative;
@@ -57,9 +59,10 @@ header nav a:hover {
     color: transparent; /* making the color transparent when hovered*/
     background: linear-gradient(90deg, rgba(184, 59, 59, 1), rgba(247, 72, 195, 1), rgba(29, 135, 210, 1));
     -webkit-background-clip: text; /* clipping the background to the text */
+    transition: color 0.3s ease-in-out;
 }
 
-.container {
+.content1 {
     width: 90%;
     height: 70vh;
     margin: auto;
@@ -70,38 +73,75 @@ header nav a:hover {
     align-items: center;
 }
 
-.container .content #text1 {
+.content1 .intro #text1 {
     font-size: 36px;
     font-weight: 600;
     color: rgb(95, 48, 120);
-    line-height: 150px;
+    line-height: 120px;
 }
 
-.container .content #text2 {
+.content1 .intro #text2 {
     font-size: 30px;
     font-weight: 600;
+    line-height: 40px;
     color: transparent; /* making the color transparent when hovered*/
     background: linear-gradient(90deg, rgb(134, 80, 163) 40%, rgba(247, 72, 195) 70%);
     -webkit-background-clip: text; /* clipping the background to the text */
 }
 
-.container img {
+.content1 img {
     max-height: 100%;
     height: auto;
 }
 
-.container::before {
+.content1::before {
     /* creating object and positioning it */
-    position: fixed;
+    position: absolute;
     width: 400px;
     height: 400px;
     content: '';
-    top: calc(45% - 200px);
-    left: calc(78% - 200px);
+    top: calc(50% - 200px);
+    left: calc(80% - 200px);
     border-radius: 50%;
 
     background-image: linear-gradient(120deg, rgb(184, 59, 59) 10%, rgb(247, 72, 195) 45%, rgb(29, 134, 210) 75%); /* creating the gradient */
     z-index: -1; /* displayed below every element*/
     filter: blur(180px); /* adding blur effect */
     pointer-events: none;
+}
+.content2{
+    width: 90%;
+    margin: auto;
+    position: relative;
+    top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7vw;
+}
+.content2 .card{
+    width: 240px;
+    height: 210px;
+    border-radius: 20%;
+    /* background: linear-gradient(120deg, rgb(196, 153, 219) , rgb(109, 60, 135)); */
+    background: linear-gradient(120deg, rgb(237, 28, 175), rgb(128, 67, 161));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content2 .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0px 8px 10px rgba(134, 80, 163);
+    transition: box-shadow 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+.content2 .card #number{
+    font-size: 50px;
+    font-weight: 600;
+}
+.content2 .card #title{
+    font-size: 25px;
+    font-weight: 500;
 }
