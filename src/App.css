@@ -2,10 +2,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: poppins;
-    background-color: rgb(30, 30, 30);
     color: rgb(212, 212, 212);
     font-size: 15px;
     min-height: 100vh;
+    /* creating the background of the webpage setting the color and the lines */
+    background-color: rgb(30, 30, 30);
     background-image: 
         repeating-linear-gradient(90deg, transparent 0 49px, rgb(21, 19, 19) 49px 50px),
         repeating-linear-gradient(180deg, transparent 0 49px, rgb(21, 19, 19) 49px 50px);
@@ -17,19 +18,19 @@ main {
 }
 
 header {
+    /* making the navbar fixed and adjusting its position */
     position: fixed;
     width: 100%;
     height: 80px;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 5vw;
+    align-items: center; /* align content vertically center*/
+    padding: 0 5vw; 
     box-sizing: border-box;
-    z-index: 100;
-    backdrop-filter: blur(25px);
+    z-index: 100; /* displayed above every element */
+    backdrop-filter: blur(25px); /* applying blur effect to content below */
 }
 
 header img {
@@ -53,10 +54,9 @@ header nav a {
 }
 
 header nav a:hover {
-    color: transparent;
+    color: transparent; /* making the color transparent when hovered*/
     background: linear-gradient(90deg, rgba(184, 59, 59, 1), rgba(247, 72, 195, 1), rgba(29, 135, 210, 1));
-    -webkit-background-clip: text;
-    background-clip: text;
+    -webkit-background-clip: text; /* clipping the background to the text */
 }
 
 .container {
@@ -74,14 +74,15 @@ header nav a:hover {
     font-size: 36px;
     font-weight: 600;
     color: rgb(95, 48, 120);
+    line-height: 150px;
 }
 
 .container .content #text2 {
     font-size: 30px;
     font-weight: 600;
+    color: transparent; /* making the color transparent when hovered*/
     background: linear-gradient(90deg, rgb(134, 80, 163) 40%, rgba(247, 72, 195) 70%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; /* clipping the background to the text */
 }
 
 .container img {
@@ -90,15 +91,17 @@ header nav a:hover {
 }
 
 .container::before {
+    /* creating object and positioning it */
     position: fixed;
     width: 400px;
     height: 400px;
     content: '';
-    background-image: linear-gradient(120deg, rgb(184, 59, 59) 10%, rgb(247, 72, 195) 45%, rgb(29, 134, 210) 75%);
-    z-index: -1;
     top: calc(45% - 200px);
     left: calc(78% - 200px);
-    border-radius: 80%;
-    filter: blur(180px);
+    border-radius: 50%;
+
+    background-image: linear-gradient(120deg, rgb(184, 59, 59) 10%, rgb(247, 72, 195) 45%, rgb(29, 134, 210) 75%); /* creating the gradient */
+    z-index: -1; /* displayed below every element*/
+    filter: blur(180px); /* adding blur effect */
     pointer-events: none;
 }
