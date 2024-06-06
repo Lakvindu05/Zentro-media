@@ -1,28 +1,31 @@
 import React, { useEffect, useRef } from 'react';
 
 const Container = () => {
-  const cardsRef = useRef([]);
+  const cardsRef = useRef([]);// Create a reference to store card elements
 
   useEffect(() => {
+    // Create an IntersectionObserver instance to observe when the card elements come into view
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
+            entry.target.classList.add('animate'); // Add the 'animate' class to the card when it intersects (comes into view)
           }
         });
       },
       {
-        threshold: 0.5, // Trigger the animation when the card is 60% in the viewport
+        threshold: 0.4, // Trigger the animation when the card is 40% in the viewport
       }
     );
 
+    // Observe each card element using the observer
     cardsRef.current.forEach((card) => {
       if (card) {
         observer.observe(card);
       }
     });
 
+    // Cleanup function to unobserve the card elements when the component unmounts
     return () => {
       cardsRef.current.forEach((card) => {
         if (card) {
