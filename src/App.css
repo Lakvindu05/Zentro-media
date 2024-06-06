@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: poppins;
@@ -7,14 +7,16 @@ body{
     font-size: 15px;
     min-height: 100vh;
     background-image: 
-        repeating-linear-gradient( 90deg, transparent 0 49px, rgb(21, 19, 19) 49px 50px ),
-        repeating-linear-gradient( 180deg, transparent 0 49px, rgb(21, 19, 19) 49px 50px);
+        repeating-linear-gradient(90deg, transparent 0 49px, rgb(21, 19, 19) 49px 50px),
+        repeating-linear-gradient(180deg, transparent 0 49px, rgb(21, 19, 19) 49px 50px);
 }
-main{
+
+main {
     width: 100%;
     margin: 0;
 }
-header{
+
+header {
     position: fixed;
     width: 100%;
     height: 80px;
@@ -28,31 +30,36 @@ header{
     box-sizing: border-box;
     z-index: 100;
     backdrop-filter: blur(25px);
-    & img{
-        width: 250px;
-    }
-    & .logo,nav{
-        display: flex;
-        gap: 30px;
-        font-size: 18px;
-        font-weight: 600;
-        cursor: pointer;
-        & a{
-            text-decoration: none;
-            color: #fff;
-            position: relative;
-            display: inline-block;
-            padding: 5px 0;
-        }
-        & a:hover{
-            color: transparent;
-            background: linear-gradient(90deg, rgba(184, 59, 59,1), rgba(247, 72, 195, 1), rgba(29, 135, 210, 1));
-            -webkit-background-clip: text;
-            background-clip: text;
-        }
-    }
 }
-.container{
+
+header img {
+    width: 250px;
+}
+
+header .logo, header nav {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    padding: 5px 0;
+}
+
+header nav a:hover {
+    color: transparent;
+    background: linear-gradient(90deg, rgba(184, 59, 59, 1), rgba(247, 72, 195, 1), rgba(29, 135, 210, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.container {
     width: 90%;
     height: 70vh;
     margin: auto;
@@ -61,32 +68,37 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    & #text1{
-        font-size: 36px;
-        font-weight: 600;
-        color: rgb(95, 48, 120) ;
-    }
-    & #text2{
-        font-size: 30px;
-        font-weight: 600;
-        background: linear-gradient(90deg, rgb(134, 80, 163) 40%, rgba(247, 72, 195) 70%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    & img{
-        max-height: 100%;
-    }
-    &::before{
-        position: fixed;
-        width: 400px;
-        height: 400px;
-        content: '';
-        background-image: linear-gradient(120deg, rgb(184, 59, 59) 10% ,rgb(247, 72, 195) 45%,rgb(29, 134, 210) 75%);
-        z-index: -1;
-        top: calc(45% - 200px);
-        left: calc(78% - 200px);
-        border-radius: 80%;
-        filter: blur(180px);
-        pointer-events: none;
-    }
+}
+
+.container .content #text1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: rgb(95, 48, 120);
+}
+
+.container .content #text2 {
+    font-size: 30px;
+    font-weight: 600;
+    background: linear-gradient(90deg, rgb(134, 80, 163) 40%, rgba(247, 72, 195) 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container img {
+    max-height: 100%;
+    height: auto;
+}
+
+.container::before {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    content: '';
+    background-image: linear-gradient(120deg, rgb(184, 59, 59) 10%, rgb(247, 72, 195) 45%, rgb(29, 134, 210) 75%);
+    z-index: -1;
+    top: calc(45% - 200px);
+    left: calc(78% - 200px);
+    border-radius: 80%;
+    filter: blur(180px);
+    pointer-events: none;
 }
