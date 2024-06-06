@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -29,7 +32,7 @@ main {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(120deg, rgb(184, 59, 59), rgb(247, 72, 195), rgb(29, 134, 210)); /* Gradient color */
+    background: linear-gradient(120deg, rgba(184, 59, 59, 0.5), rgba(247, 72, 195, 0.5), rgba(29, 135, 210, 0.5)); /* Gradient color */
     border-radius: 5px; /* Round thumb */
 }
 
@@ -71,7 +74,7 @@ header .logo, header nav {
 }
 
 header nav a {
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 600;
     text-decoration: none;
     color: #fff;
@@ -103,14 +106,18 @@ header nav a:hover {
 }
 
 .content1 .intro #text1 {
-    font-size: 36px;
-    font-weight: 600;
-    color: rgb(95, 48, 120);
-    line-height: 120px;
+    font-family: Kanit,sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 100px;
+    color: transparent; /* making the color transparent when hovered*/
+    background: linear-gradient(90deg, rgb(134, 80, 163) 40%, rgba(247, 72, 195) 70%);
+    -webkit-background-clip: text; /* clipping the background to the text */
 }
 
 .content1 .intro #text2 {
-    font-size: 30px;
+    font-family: Kanit,sans-serif;
+    font-size: 24px;
     font-weight: 600;
     line-height: 40px;
     color: transparent; /* making the color transparent when hovered*/
@@ -118,9 +125,23 @@ header nav a:hover {
     -webkit-background-clip: text; /* clipping the background to the text */
 }
 
+/* float animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .content1 img {
     max-height: 100%;
     height: auto;
+    animation: float 3s ease-in-out infinite;
 }
 
 .content1::before {
@@ -141,7 +162,7 @@ header nav a:hover {
 
 .content2{
     width: 90%;
-    margin: 5vh auto auto;
+    margin: 5vh auto 10vh auto;
     position: relative;
     display: flex;
     justify-content: center;
@@ -162,7 +183,7 @@ header nav a:hover {
 
     background-image: linear-gradient(120deg, rgb(184, 59, 59) 10%, rgb(247, 72, 195) 45%, rgb(29, 134, 210) 75%); /* creating the gradient */
     z-index: -1; /* displayed below every element*/
-    filter: blur(50px); /* adding blur effect */
+    filter: blur(70px); /* adding blur effect */
     pointer-events: none;
 }
 
@@ -208,13 +229,143 @@ header nav a:hover {
 }
 
 .content2 .card #number {
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 600;
+    font-family: Kanit,sans-serif;
     pointer-events: none;
 }
 
 .content2 .card #title {
-    font-size: 25px;
+    font-size: 26px;
     font-weight: 500;
+    font-family: Kanit,sans-serif;
     pointer-events: none;
+}
+
+/* Services Section */
+.services {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services::before{
+    /* creating object and positioning it */
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    content: '';
+    top: calc(50% - 75px);
+    left: calc(75% - 75px);
+    border-radius: 50%;
+
+    background-image: linear-gradient(120deg, rgb(184, 59, 59) 10%, rgb(247, 72, 195) 45%, rgb(29, 134, 210) 75%); /* creating the gradient */
+    z-index: -1; /* displayed below every element*/
+    filter: blur(70px); /*adding blur effect */
+    pointer-events: none;
+}
+
+.services::after{
+    /* creating object and positioning it */
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    content: '';
+    top: calc(70% - 125px);
+    left: calc(15% - 125px);
+    border-radius: 50%;
+
+    background-image: linear-gradient(120deg, rgb(184, 59, 59) 10%, rgb(247, 72, 195) 45%, rgb(29, 134, 210) 75%); /* creating the gradient */
+    z-index: -1; /* displayed below every element*/
+    filter: blur(100px); /*adding blur effect */
+    pointer-events: none;
+}
+
+.services .services-left,
+.services .services-right {
+    width: 50%;
+    padding: 0 2.5%;
+}
+
+.services .services-left #heading1 {
+    font-size: 36px;
+    font-weight: 400;
+    font-family: Kanit, sans-serif;
+}
+
+.services .services-left #heading2 {
+    font-size: 48px;
+    font-weight: 600;
+    font-family: Kanit, sans-serif;
+}
+
+.services-left p,
+.services-right span {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.service-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    width: 240px;
+    height: 210px;
+    perspective: 1000px; /* Perspective for 3D effect */
+    margin: 2.5%;
+}
+
+.service-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.service-card:hover .service-card-inner {
+    transform: rotateY(180deg);
+}
+
+.service-card-front,
+.service-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, rgb(237, 28, 175), rgb(128, 67, 161));
+}
+
+.service-card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(120deg, rgb(128, 67, 161), rgb(237, 28, 175));
+}
+
+.service-card span,
+.service-card p {
+    font-family: Kanit, sans-serif;
+    pointer-events: none;
+    text-align: center;
+}
+
+.service-card #number {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.service-card #title {
+    font-size: 26px;
+    font-weight: 500;
 }
