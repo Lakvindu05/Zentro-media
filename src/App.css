@@ -9,32 +9,6 @@ body{
     background-image: 
         repeating-linear-gradient( 90deg, transparent 0 49px, rgb(21, 19, 19) 49px 50px ),
         repeating-linear-gradient( 180deg, transparent 0 49px, rgb(21, 19, 19) 49px 50px);
-    &::before{
-        position: fixed;
-        width: 400px;
-        height: 400px;
-        content: '';
-        background-image: linear-gradient(120deg, rgb(184, 59, 59) 10% ,rgb(247, 72, 195) 45%,rgb(29, 134, 210) 75%);
-        z-index: -1;
-        top: calc(50% - 200px);
-        left: calc(75% - 200px);
-        border-radius: 80%;
-        filter: blur(180px);
-        pointer-events: none;
-    }
-    &::after {
-        position: fixed;
-        width: 250px;
-        height: 250px;
-        content: '';
-        background-image: linear-gradient(120deg, rgb(184, 59, 59) 10% ,rgb(247, 72, 195) 45%,rgb(29, 134, 210) 75%);
-        z-index: -1;
-        top: calc(20% - 150px);
-        left: calc(25% - 150px);
-        border-radius: 50%;
-        filter: blur(120px);
-        pointer-events: none;
-    }
 }
 main{
     width: 100%;
@@ -50,7 +24,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 5vw;
     box-sizing: border-box;
     z-index: 100;
     backdrop-filter: blur(25px);
@@ -76,5 +50,43 @@ header{
             -webkit-background-clip: text;
             background-clip: text;
         }
+    }
+}
+.container{
+    width: 90%;
+    height: 70vh;
+    margin: auto;
+    position: relative;
+    top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & #text1{
+        font-size: 36px;
+        font-weight: 600;
+        color: rgb(95, 48, 120) ;
+    }
+    & #text2{
+        font-size: 30px;
+        font-weight: 600;
+        background: linear-gradient(90deg, rgb(134, 80, 163) 40%, rgba(247, 72, 195) 70%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    & img{
+        max-height: 100%;
+    }
+    &::before{
+        position: fixed;
+        width: 400px;
+        height: 400px;
+        content: '';
+        background-image: linear-gradient(120deg, rgb(184, 59, 59) 10% ,rgb(247, 72, 195) 45%,rgb(29, 134, 210) 75%);
+        z-index: -1;
+        top: calc(45% - 200px);
+        left: calc(78% - 200px);
+        border-radius: 80%;
+        filter: blur(180px);
+        pointer-events: none;
     }
 }
