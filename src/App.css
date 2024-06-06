@@ -61,6 +61,23 @@ header {
     backdrop-filter: blur(50px); /* applying blur effect to content below */
 }
 
+header ::before{
+    /* creating object and positioning it */
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    content: '';
+    top: calc(50% - 25px);
+    left: calc(95% - 25px);
+    border-radius: 50%;
+
+    background-image: linear-gradient(120deg, rgb(184, 59, 59) 10%, rgb(247, 72, 195) 45%, rgb(29, 134, 210) 75%); /* creating the gradient */
+    z-index: -1; /* displayed below every element*/
+    filter: blur(50px); /* adding blur effect */
+    pointer-events: none;
+    /* animation: float3 3s ease-in-out infinite; */
+}
+
 header img {
     width: 250px;
 }
@@ -131,7 +148,7 @@ header nav a:hover {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-20px);
     }
     100% {
         transform: translateY(0);
@@ -141,12 +158,11 @@ header nav a:hover {
 .content1 img {
     max-height: 100%;
     height: auto;
-    animation: float 3s ease-in-out infinite;
+    animation: float 5s ease-in-out infinite;
 }
 
 .content1::before {
-    /* creating object and positioning it */
-    position: absolute;
+    position: absolute;/* creating object and positioning it */
     width: 400px;
     height: 400px;
     content: '';
@@ -268,6 +284,18 @@ header nav a:hover {
     pointer-events: none;
 }
 
+@keyframes float2 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-150px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .services::after{
     /* creating object and positioning it */
     position: absolute;
@@ -275,13 +303,14 @@ header nav a:hover {
     height: 250px;
     content: '';
     top: calc(70% - 125px);
-    left: calc(15% - 125px);
+    left: calc(5% - 125px);
     border-radius: 50%;
 
     background-image: linear-gradient(120deg, rgb(184, 59, 59) 10%, rgb(247, 72, 195) 45%, rgb(29, 134, 210) 75%); /* creating the gradient */
     z-index: -1; /* displayed below every element*/
     filter: blur(100px); /*adding blur effect */
     pointer-events: none;
+    animation: float2 5s ease-in-out infinite;
 }
 
 .services .services-left,
