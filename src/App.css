@@ -62,12 +62,15 @@ header nav a:hover {
     transition: color 0.3s ease-in-out;
 }
 
+.container{
+    margin-top: 100px;
+}
+
 .content1 {
     width: 90%;
     height: 70vh;
     margin: auto;
     position: relative;
-    top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,39 +112,51 @@ header nav a:hover {
     filter: blur(180px); /* adding blur effect */
     pointer-events: none;
 }
+
 .content2{
     width: 90%;
-    margin: auto;
+    margin: 5vh auto auto;
     position: relative;
-    top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 7vw;
 }
-.content2 .card{
+
+.content2 .card {
     width: 240px;
     height: 210px;
     border-radius: 20%;
-    /* background: linear-gradient(120deg, rgb(196, 153, 219) , rgb(109, 60, 135)); */
     background: linear-gradient(120deg, rgb(237, 28, 175), rgb(128, 67, 161));
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.3s ease-out, transform 0.8s ease-out;
 }
-.content2 .card:hover{
+
+.content2 .card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content2 .card:hover {
     transform: translateY(-15px);
     box-shadow: 0px 8px 10px rgba(134, 80, 163);
-    transition: box-shadow 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
-.content2 .card #number{
+
+.content2 .card #number {
     font-size: 50px;
     font-weight: 600;
+    pointer-events: none;
 }
-.content2 .card #title{
+
+.content2 .card #title {
     font-size: 25px;
     font-weight: 500;
+    pointer-events: none;
 }
