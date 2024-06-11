@@ -14,7 +14,7 @@ const Container = () => {
         });
       },
       {
-        threshold: 0.4, // Trigger the animation when the card is 40% in the viewport
+        threshold: 0.1, // Trigger the animation when the card is 40% in the viewport
       }
     );
 
@@ -43,7 +43,7 @@ const Container = () => {
           <span id="text2">Supercharge Your Business With High-Impact Social Media Advertising. <br />
             Maximise ROI, Skyrocket sales. Unleash Your Business Potential.</span>
         </div>
-        <img src="/Container-img.png" alt="Business Growth" />
+        <img src="./Container-img.png" alt="Business Growth" />
       </div>
       <div className="content2">
         <div className="card" ref={(el) => (cardsRef.current[0] = el)}>

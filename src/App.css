@@ -107,6 +107,31 @@ header nav a:hover {
     transition: color 0.3s ease-in-out;
 }
 
+/* float animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float2 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-150px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 /* The Container */
 .container{
     margin-top: 100px;
@@ -140,19 +165,6 @@ header nav a:hover {
     color: transparent; /* making the color transparent when hovered*/
     background: linear-gradient(90deg, rgb(134, 80, 163) 40%, rgba(247, 72, 195) 70%);
     -webkit-background-clip: text; /* clipping the background to the text */
-}
-
-/* float animation */
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
 }
 
 .content1 img {
@@ -229,8 +241,8 @@ header nav a:hover {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 0.3s ease-out, transform 0.8s ease-out;
+    transform: translateY(150px);
+    transition: opacity 0.3s ease-out, transform 1.5s ease-out;
 }
 
 .content2 .card.animate {
@@ -261,7 +273,7 @@ header nav a:hover {
 /* Services Section */
 .services {
     width: 90%;
-    margin: auto;
+    margin: 15vh auto 10vh auto;
     position: relative;
     display: flex;
     justify-content: center;
@@ -282,18 +294,6 @@ header nav a:hover {
     z-index: -1; /* displayed below every element*/
     filter: blur(70px); /*adding blur effect */
     pointer-events: none;
-}
-
-@keyframes float2 {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-150px);
-    }
-    100% {
-        transform: translateY(0);
-    }
 }
 
 .services::after{
@@ -319,13 +319,13 @@ header nav a:hover {
     padding: 0 2.5%;
 }
 
-.services .services-left #heading1 {
+#heading1 {
     font-size: 36px;
     font-weight: 400;
     font-family: Kanit, sans-serif;
 }
 
-.services .services-left #heading2 {
+#heading2 {
     font-size: 48px;
     font-weight: 600;
     font-family: Kanit, sans-serif;
@@ -397,4 +397,88 @@ header nav a:hover {
 .service-card #title {
     font-size: 26px;
     font-weight: 500;
+}
+
+.Team {
+    padding: 50px 0;
+    text-align: center;
+    height: fit-content;
+}
+
+.team-container {
+    margin: 5vh auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7vw;
+}
+
+.team-card {
+    width: 180px;
+    height: 280px;
+    perspective: 1000px;
+}
+
+.team-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.team-card:hover .team-card-inner {
+    transform: rotateY(180deg);
+}
+
+.team-card-front,
+.team-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, rgb(237, 28, 175), rgb(128, 67, 161));
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(120deg, rgb(128, 67, 161), rgb(237, 28, 175));
+}
+
+.team-card img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-card h2 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+.team-card .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.team-card .social-icons a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.team-card .social-icons a:hover {
+    color: rgba(247, 72, 195, 1);
 }
